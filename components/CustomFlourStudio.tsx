@@ -106,7 +106,8 @@ export function CustomFlourStudio({ onSuccessToast }: CustomFlourStudioProps) {
       `Best regards,\n${clientName}`
     );
 
-    window.location.href = `mailto:${BAKER_INFO.email}?subject=${subject}&body=${body}`;
+    const mailtoUrl = `mailto:${BAKER_INFO.email}?subject=${subject}&body=${body}`;
+    window.open(mailtoUrl, '_self');
     setIsSubmitted(true);
   };
 

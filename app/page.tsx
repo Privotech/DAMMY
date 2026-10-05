@@ -128,6 +128,12 @@ export default function HomePage() {
     setCartItems([]);
   };
 
+  // Re-order past items from My Orders history
+  const handleReorderPastItems = (pastItems: CartItem[]) => {
+    setCartItems((prev) => [...prev, ...pastItems]);
+    triggerToast(`Re-loaded ${pastItems.length} treats from past order into your bag!`);
+  };
+
   // Open receipt slip
   const handleOpenReceipt = (orderData: NonNullable<typeof receiptData>) => {
     setReceiptData(orderData);
@@ -229,6 +235,7 @@ export default function HomePage() {
         onUpdateQuantity={handleUpdateQuantity}
         onRemoveItem={handleRemoveItem}
         onClearCart={handleClearCart}
+        onReorderItems={handleReorderPastItems}
         onOpenReceipt={handleOpenReceipt}
       />
 

@@ -47,6 +47,21 @@ export interface CartItem {
   specialNote?: string;
 }
 
+export interface SavedOrder {
+  orderRef: string;
+  createdAt: string;
+  items: CartItem[];
+  subtotal: number;
+  discount: number;
+  total: number;
+  currency: Currency;
+  customerName: string;
+  deliveryDate: string;
+  deliveryAddress: string;
+  specialNotes: string;
+  channel: 'WhatsApp' | 'Email' | 'Quote Slip';
+}
+
 export interface BulkCateringSelection {
   eventType: 'wedding' | 'birthday' | 'corporate' | 'church' | 'party' | 'other';
   guestCount: number;
