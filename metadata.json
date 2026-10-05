@@ -1,0 +1,6 @@
+{
+  "name": "Privy FlourCraft - Homemade Pastries & Bulk Treats",
+  "description": "Artisanal homemade Nigerian chin chin, fluffy glazed donuts, golden egg rolls, and custom flour pastries for retail, bulk buckets, parties, and catering events.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
