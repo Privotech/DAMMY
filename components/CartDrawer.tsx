@@ -111,7 +111,7 @@ export function CartDrawer({
   const discountAmount = Number(((subtotal * discountPct) / 100).toFixed(2));
   const finalTotal = subtotal - discountAmount;
 
-  const persistOrder = (ref: string, channel: 'WhatsApp' | 'Email' | 'Quote Slip') => {
+  const persistOrder = async (ref: string, channel: 'WhatsApp' | 'Email' | 'Quote Slip') => {
     const orderToSave: SavedOrder = {
       orderRef: ref,
       createdAt: new Date().toISOString(),
@@ -128,13 +128,23 @@ export function CartDrawer({
     };
     const updated = saveOrderToHistory(orderToSave);
     setSavedOrders(updated);
+    try {
+      const response = await fetch('/api/orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(orderToSave),
+      });
+      if (!response.ok) throw new Error(`Order save returned ${response.status}`);
+    } catch (error) {
+      console.error('Could not sync order to the database; it remains in this browser\'s history.', error);
+    }
   };
 
-  const handleWhatsAppCheckout = () => {
+  const handleWhatsAppCheckout = async () => {
     if (cartItems.length === 0) return;
 
     const ref = generateOrderReference();
-    persistOrder(ref, 'WhatsApp');
+    await persistOrder(ref, 'WhatsApp');
 
     const itemLines = cartItems.map(
       (item) =>
@@ -168,11 +178,11 @@ export function CartDrawer({
     window.open(url, '_blank');
   };
 
-  const handleEmailCheckout = () => {
+  const handleEmailCheckout = async () => {
     if (cartItems.length === 0) return;
 
     const ref = generateOrderReference();
-    persistOrder(ref, 'Email');
+    await persistOrder(ref, 'Email');
 
     const subject = encodeURIComponent(`Order Inquiry [${ref}]: ${customerName || 'Customer'}`);
     const itemLines = cartItems
@@ -202,9 +212,9 @@ export function CartDrawer({
     window.open(mailtoUrl, '_self');
   };
 
-  const handleGenerateReceipt = () => {
+  const handleGenerateReceipt = async () => {
     const ref = generateOrderReference();
-    persistOrder(ref, 'Quote Slip');
+    await persistOrder(ref, 'Quote Slip');
 
     onOpenReceipt({
       orderRef: ref,

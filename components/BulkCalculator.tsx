@@ -323,7 +323,7 @@ export function BulkCalculator({
 
   return (
     <section id="calculator" className="py-16 lg:py-24 bg-[#FAF7F2] border-t border-stone-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10">
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-900/90 mb-2">

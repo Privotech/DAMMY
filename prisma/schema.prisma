@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Order {
+  orderRef       String   @id @map("order_ref") @db.Text
+  createdAt      DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  items          Json     @db.JsonB
+  subtotal       Decimal  @db.Decimal(14, 2)
+  discount       Decimal  @db.Decimal(14, 2)
+  total          Decimal  @db.Decimal(14, 2)
+  currency       String   @db.Text
+  customerName   String   @map("customer_name") @db.Text
+  deliveryDate   String   @map("delivery_date") @db.Text
+  deliveryAddress String  @map("delivery_address") @db.Text
+  specialNotes   String   @default("") @map("special_notes") @db.Text
+  channel        String   @db.Text
+
+  @@index([createdAt(sort: Desc)], map: "orders_created_at_idx")
+  @@map("orders")
+}

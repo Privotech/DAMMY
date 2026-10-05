@@ -7,7 +7,7 @@ import { BAKER_INFO } from '@/lib/data';
 export function Footer() {
   return (
     <footer className="bg-[#1C1205] text-[#D8CFBF] border-t border-amber-950/40 pt-16 pb-12 text-xs">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-amber-950/60">
           {/* Brand Info */}
           <div className="md:col-span-1 space-y-3">
@@ -16,7 +16,7 @@ export function Footer() {
                 <ChefHat className="w-5 h-5 text-stone-950" />
               </div>
               <span className="font-display font-bold text-lg text-white">
-                Privy FlourCraft
+                {BAKER_INFO.shortName}
               </span>
             </div>
             <p className="text-stone-400 text-xs leading-relaxed">
@@ -35,27 +35,27 @@ export function Footer() {
             </span>
             <ul className="space-y-2 text-stone-400">
               <li>
-                <a href="#menu" className="hover:text-amber-200 transition-colors">
+                <a href="/menu" className="hover:text-amber-200 transition-colors">
                   Crunchy Golden Chin Chin
                 </a>
               </li>
               <li>
-                <a href="#menu" className="hover:text-amber-200 transition-colors">
+                <a href="/menu" className="hover:text-amber-200 transition-colors">
                   Fluffy Glazed Donuts
                 </a>
               </li>
               <li>
-                <a href="#menu" className="hover:text-amber-200 transition-colors">
+                <a href="/menu" className="hover:text-amber-200 transition-colors">
                   Traditional Golden Egg Rolls
                 </a>
               </li>
               <li>
-                <a href="#menu" className="hover:text-amber-200 transition-colors">
+                <a href="/menu" className="hover:text-amber-200 transition-colors">
                   Flaky Meat & Chicken Pies
                 </a>
               </li>
               <li>
-                <a href="#menu" className="hover:text-amber-200 transition-colors">
+                <a href="/menu" className="hover:text-amber-200 transition-colors">
                   Sweet Puff Puff Drums
                 </a>
               </li>
@@ -69,27 +69,27 @@ export function Footer() {
             </span>
             <ul className="space-y-2 text-stone-400">
               <li>
-                <a href="#bulk-deals" className="hover:text-amber-200 transition-colors">
+                <a href="/party-packs" className="hover:text-amber-200 transition-colors">
                   Wedding Souvenir Jars
                 </a>
               </li>
               <li>
-                <a href="#calculator" className="hover:text-amber-200 transition-colors">
+                <a href="/event-calculator" className="hover:text-amber-200 transition-colors">
                   Bulk Calculator & Tiers
                 </a>
               </li>
               <li>
-                <a href="#custom-studio" className="hover:text-amber-200 transition-colors">
+                <a href="/custom-orders" className="hover:text-amber-200 transition-colors">
                   Flour Craft Studio (Custom)
                 </a>
               </li>
               <li>
-                <a href="#storage-faq" className="hover:text-amber-200 transition-colors">
+                <a href="/help" className="hover:text-amber-200 transition-colors">
                   6-Month Storage & Reheating
                 </a>
               </li>
               <li>
-                <a href="#storage-faq" className="hover:text-amber-200 transition-colors">
+                <a href="/help" className="hover:text-amber-200 transition-colors">
                   Lead Times & FAQ
                 </a>
               </li>

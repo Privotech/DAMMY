@@ -1,13 +1,13 @@
 import { PastryItem } from './types';
 
 export const BAKER_INFO = {
-  name: 'Privilege Oyegbile',
-  businessName: 'Privy FlourCraft & Homemade Treats',
-  shortName: 'Privy FlourCraft',
-  email: 'privilegeoyegbile@gmail.com',
-  phoneDisplay: '+234 814 620 9188', // Standard international contact format
-  whatsappNumber: '2348146209188', // WhatsApp API formatted (no plus or spaces)
-  tagline: 'Artisanal Chin Chin, Fluffy Donuts, Crispy Egg Rolls & Custom Flour Pastries',
+  name: 'Damilola Omotayo',
+  businessName: 'Crunchy Crispy Chin Chin',
+  shortName: 'Dammy Crunchy',
+  email: 'omotayodamilola762@gmail.com',
+  phoneDisplay: '+234 911 781 4369',
+  whatsappNumber: '2349117814369',
+  tagline: 'Crunchy Crispy Chin Chin, Fluffy Donuts, Crispy Egg Rolls & Custom Flour Pastries',
   orderLeadTime: '24-48 hours for small batches · 3-5 days for bulk party catering',
   location: 'Fresh Kitchen Baking · Home Delivery & Event Venue Drop-off',
 };

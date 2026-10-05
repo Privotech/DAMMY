@@ -34,7 +34,7 @@ export function StorageAndFAQ() {
 
   return (
     <section id="storage-faq" className="py-16 lg:py-24 bg-[#FAF7F2] border-t border-stone-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10">
         {/* Section 1: Freshness, Storage & Reheating Guides */}
         <div className="mb-16">
           <div className="text-center max-w-2xl mx-auto mb-10">

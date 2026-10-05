@@ -14,7 +14,7 @@ interface PartyPacksSectionProps {
 export function PartyPacksSection({ currency, onSelectCombo }: PartyPacksSectionProps) {
   return (
     <section id="bulk-deals" className="py-16 bg-[#F5F2EB] border-t border-b border-stone-200/90">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-900/90 mb-2">
             <Gift className="w-3.5 h-3.5 text-amber-700" />

@@ -26,7 +26,7 @@ export function Navbar({
     <header className="sticky top-0 z-40 bg-[#FAFAF7]/95 backdrop-blur-md border-b border-stone-200/80 transition-all">
       {/* Top Banner: Quick Contact & Lead Time */}
       <div className="bg-[#2D1B06] text-[#F3E5D0] px-4 py-1.5 text-xs">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between">
           <div className="flex items-center gap-2 truncate">
             <span className="inline-block w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
             <span className="font-medium truncate">
@@ -47,15 +47,15 @@ export function Navbar({
       </div>
 
       {/* Main Nav Bar (Strict 3-zone Top Bar Contract) */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 h-18 flex items-center justify-between gap-4">
         {/* Zone 1: Wordmark brand element */}
-        <a href="#" className="flex items-center gap-2.5 text-slate-900 group shrink-0">
+        <a href="/" className="flex items-center gap-2.5 text-slate-900 group shrink-0">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#E5A823] to-[#B87D0E] flex items-center justify-center text-white shadow-sm shadow-amber-900/10 group-hover:scale-105 transition-transform">
             <ChefHat className="w-5 h-5 text-amber-50" />
           </div>
           <div className="flex flex-col">
             <span className="font-display font-bold text-xl sm:text-2xl text-[#2B1805] tracking-tight leading-none">
-              Privy FlourCraft
+              {BAKER_INFO.shortName}
             </span>
             <span className="text-[11px] font-medium text-amber-900/70 tracking-wider uppercase mt-0.5">
               Homemade Pastries & Bulk Catering
@@ -66,31 +66,31 @@ export function Navbar({
         {/* Zone 2: 4-5 Clean Navigation links */}
         <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-stone-700">
           <a
-            href="#menu"
+            href="/menu"
             className="hover:text-[#9A5B0B] transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#E5A823] hover:after:w-full after:transition-all"
           >
             Menu & Treats
           </a>
           <a
-            href="#bulk-deals"
+            href="/party-packs"
             className="hover:text-[#9A5B0B] transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#E5A823] hover:after:w-full after:transition-all"
           >
             Party Packs
           </a>
           <a
-            href="#calculator"
+            href="/event-calculator"
             className="hover:text-[#9A5B0B] transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#E5A823] hover:after:w-full after:transition-all"
           >
             Event Calculator
           </a>
           <a
-            href="#custom-studio"
+            href="/custom-orders"
             className="hover:text-[#9A5B0B] transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#E5A823] hover:after:w-full after:transition-all"
           >
             Flour Craft Studio
           </a>
           <a
-            href="#storage-faq"
+            href="/help"
             className="hover:text-[#9A5B0B] transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#E5A823] hover:after:w-full after:transition-all"
           >
             Storage & FAQs
@@ -160,35 +160,35 @@ export function Navbar({
         <div className="lg:hidden border-t border-stone-200 bg-[#FAFAF7] px-4 pt-3 pb-6 space-y-3 shadow-lg">
           <nav className="flex flex-col space-y-2 text-sm font-medium text-stone-800">
             <a
-              href="#menu"
+              href="/menu"
               onClick={() => setMobileMenuOpen(false)}
               className="px-3 py-2 rounded-lg hover:bg-stone-100"
             >
               Menu & Treats
             </a>
             <a
-              href="#bulk-deals"
+              href="/party-packs"
               onClick={() => setMobileMenuOpen(false)}
               className="px-3 py-2 rounded-lg hover:bg-stone-100"
             >
               Party & Event Packs
             </a>
             <a
-              href="#calculator"
+              href="/event-calculator"
               onClick={() => setMobileMenuOpen(false)}
               className="px-3 py-2 rounded-lg hover:bg-stone-100"
             >
               Bulk & Event Calculator
             </a>
             <a
-              href="#custom-studio"
+              href="/custom-orders"
               onClick={() => setMobileMenuOpen(false)}
               className="px-3 py-2 rounded-lg hover:bg-stone-100"
             >
               Flour Craft Studio (Custom Treats)
             </a>
             <a
-              href="#storage-faq"
+              href="/help"
               onClick={() => setMobileMenuOpen(false)}
               className="px-3 py-2 rounded-lg hover:bg-stone-100"
             >

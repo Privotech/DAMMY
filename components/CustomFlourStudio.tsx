@@ -113,7 +113,7 @@ export function CustomFlourStudio({ onSuccessToast }: CustomFlourStudioProps) {
 
   return (
     <section id="custom-studio" className="py-16 lg:py-24 bg-white border-t border-stone-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: The Flour Craft Philosophy & Inspiration Cards */}
           <div className="lg:col-span-5">
